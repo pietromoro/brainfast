@@ -15,6 +15,9 @@ use self::Token::*;
 fn main() {
   let tokens = tokenize("+-><,.[] > + - ABC , .. DE . F");
   println!("{:?}", tokens);
+  
+  let generated_code = generate(&tokens);
+  println!("Generated code:\n{}", generated_code);
 }
 
 fn tokenize(input: &str) -> Vec<Token> {
