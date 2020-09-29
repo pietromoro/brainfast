@@ -69,4 +69,7 @@ fn generate(tokens: &[Token]) -> String {
       }
     }
   }
+  output.push_str("}\n");
+
+  output
 }
