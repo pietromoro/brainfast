@@ -39,7 +39,7 @@ fn tokenize(input: &str) -> Vec<Token> {
 }
 
 fn generate(tokens: &[Token]) -> String {
-  let mut output = String::new();
+  let mut output = String::from(include_str!("preface.c"));
 
   for &token in tokens {
     match token {
