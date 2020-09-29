@@ -13,7 +13,8 @@ enum Token {
 use self::Token::*;
 
 fn main() {
-    println!("Hello, world!");
+  let tokens = tokenize("+-><,.[] > + - ABC , .. DE . F");
+  println!("{:?}", tokens);
 }
 
 fn tokenize(input: &str) -> Vec<Token> {
