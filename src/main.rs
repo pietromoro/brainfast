@@ -37,3 +37,36 @@ fn tokenize(input: &str) -> Vec<Token> {
 
   tokens
 }
+
+fn generate(tokens: &[Token]) -> String {
+  let mut output = String::new();
+
+  for &token in tokens {
+    match token {
+      Add => {
+        
+      }
+      Sub => {
+        
+      }
+      Right => {
+        
+      }
+      Left => {
+        
+      }
+      Read => {
+        
+      }
+      Write => {
+
+      }
+      BeginLoop => {
+        output_source.push_str("while () {\n");
+      }
+      EndLoop => {
+        output_source.push_str("}\n");
+      }
+    }
+  }
+}
