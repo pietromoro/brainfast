@@ -44,28 +44,28 @@ fn generate(tokens: &[Token]) -> String {
   for &token in tokens {
     match token {
       Add => {
-        
+        output.push_str("++*ptr;\n");
       }
       Sub => {
-        
+        output.push_str("--*ptr;\n");
       }
       Right => {
-        
+        output.push_str("++ptr;\n");
       }
       Left => {
-        
+        output.push_str("--ptr;\n");
       }
       Read => {
-        
+        output.push_str("*ptr=getchar();\n");
       }
       Write => {
-
+        output.push_str("putchar(*ptr);\n");
       }
       BeginLoop => {
-        output_source.push_str("while () {\n");
+        output.push_str("while (*ptr) {\n");
       }
       EndLoop => {
-        output_source.push_str("}\n");
+        output.push_str("}\n");
       }
     }
   }
